@@ -1,18 +1,35 @@
-<script setup>
+<!-- <script setup>
 import { shallowRef } from "vue";
-import Composition from "@/components/Composition.vue";
-import Option from "@/components/Option.vue";
+import Composition from "@/components/Composition/Composition.vue";
+import Option from "@/components/Option/Option.vue";
 
 const api = shallowRef(Composition);
+</script> -->
+
+<script>
+import CompositionAPI from "@/components/Composition/Composition.vue";
+import OptionAPI from "@/components/Option/Option.vue";
+
+export default {
+  components: {
+    CompositionAPI,
+    OptionAPI,
+  },
+  data() {
+    return {
+      api: "CompositionAPI",
+    };
+  },
+};
 </script>
 
 <template>
   <!-- <div class="index"> -->
   <header class="index__header">
-    <button class="index__header-change-api" @click="api = Composition">
+    <button class="index__header-change-api" @click="api = 'CompositionAPI'">
       Composition
     </button>
-    <button class="index__header-change-api" @click="api = Option">
+    <button class="index__header-change-api" @click="api = 'OptionAPI'">
       Option
     </button>
   </header>
