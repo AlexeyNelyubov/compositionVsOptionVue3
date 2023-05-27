@@ -26,10 +26,13 @@ export default {
 <template>
   <!-- <div class="index"> -->
   <header class="index__header">
-    <button class="index__header-change-api" @click="api = 'CompositionAPI'">
+    <button
+      class="index__header-change-api-btn"
+      @click="api = 'CompositionAPI'"
+    >
       Composition
     </button>
-    <button class="index__header-change-api" @click="api = 'OptionAPI'">
+    <button class="index__header-change-api-btn" @click="api = 'OptionAPI'">
       Option
     </button>
   </header>
@@ -48,17 +51,17 @@ export default {
   justify-content: center;
   border-bottom: 2px solid #000;
 }
-.index__header-change-api {
+.index__header-change-api-btn {
   margin: 2vw;
   font-size: var(--font-size, 32px);
   border: none;
   background-color: #fff;
   cursor: pointer;
 }
-.index__header-change-api:hover {
+.index__header-change-api-btn:hover {
   color: #0000ff;
 }
-.index__header-change-api:active {
+.index__header-change-api-btn:active {
   color: #00ff26;
 }
 </style>
