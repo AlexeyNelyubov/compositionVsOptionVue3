@@ -64,22 +64,6 @@ const numberOfTasks = computed(() => {
   </div>
 </template>
 
-<style>
-.task-list__number-of-tasks {
-  margin: 5vh 0;
-  font-size: var(--font-size);
-}
+<style></style>
 
-.task-list__single-task {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 2vh;
-}
-
-.task-list__single-task-delite {
-  background-color: #fff;
-  width: var(--font-size);
-  height: var(--font-size);
-  margin-left: 1vh;
-}
-</style>
+//style for component located in parent component Option.vue

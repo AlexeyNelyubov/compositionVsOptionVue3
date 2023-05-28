@@ -1,8 +1,8 @@
 <script setup>
 import { ref } from "vue";
 
-import TaskList from "@/components/Composition/TasksList.vue";
-import DoneTaskList from "@/components/Composition/DoneTaskList.vue";
+import TasksList from "@/components/Composition/TasksList.vue";
+import DoneTasksList from "@/components/Composition/DoneTasksList.vue";
 
 const task = ref("");
 const newTask = ref("");
@@ -25,11 +25,11 @@ const addNewTask = () => {
     />
     <!-- @keydown.enter="addNewTask" -->
     <div class="composition__task-list">
-      <TaskList
+      <TasksList
         :newTask="newTask"
         @replace-task-to-done-tasks="(newDoneTask) => (doneTask = newDoneTask)"
       />
-      <DoneTaskList :doneTask="doneTask" style="margin-left: 10vw" />
+      <DoneTasksList :doneTask="doneTask" style="margin-left: 10vw" />
     </div>
   </main>
 </template>
@@ -56,5 +56,23 @@ const addNewTask = () => {
   display: flex;
   justify-content: center;
   font-size: var(--font-size);
+}
+
+.task-list__number-of-tasks {
+  margin: 5vh 0;
+  font-size: var(--font-size);
+}
+
+.task-list__single-task {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2vh;
+}
+
+.task-list__single-task-delite {
+  background-color: #fff;
+  width: var(--font-size);
+  height: var(--font-size);
+  margin-left: 1vh;
 }
 </style>
